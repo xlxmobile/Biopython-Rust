@@ -1,0 +1,22 @@
+Metadata-Version: 2.2
+Name: biopython-rust
+Version: 0.1.0
+Summary: High-performance Biopython implementation with Rust backend
+Home-page: https://github.com/xlxmobile/Biopython-Rust
+Author: Xuliang Xu
+Author-email: xlxmobile@outlook.com
+License: MIT
+Project-URL: repository, https://github.com/xlxmobile/Biopython-Rust
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Rust
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-python
+
+# Biopython-Rust

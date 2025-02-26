@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+biopython_rust/__init__.py
+biopython_rust/seq.py
+biopython_rust.egg-info/PKG-INFO
+biopython_rust.egg-info/SOURCES.txt
+biopython_rust.egg-info/dependency_links.txt
+biopython_rust.egg-info/top_level.txt
+tests/test_seq.py

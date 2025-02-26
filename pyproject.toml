@@ -1,0 +1,20 @@
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "biopython-rust"  # 假设你用这个唯一名称，避免与 biopython 重名
+version = "0.1.0"
+description = "High-performance Biopython implementation with Rust backend"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}  # 修改为 MIT 许可证
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "License :: OSI Approved :: MIT License",  # 更新 classifiers 中的许可证
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+repository = "https://github.com/xlxmobile/Biopython-Rust"

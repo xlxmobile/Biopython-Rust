@@ -1,0 +1,20 @@
+[package]
+name = "biopython_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Xuliang Xu <xlxmobile@outlook.com>"]
+description = "A Rust implementation of Biopython with performance optimizations"
+license = "MIT"
+
+[lib]
+name = "biopython_rust"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.18.3", features = ["extension-module"] }
+numpy = "0.18.0"
+rayon = "1.7.0"  # 并行计算
+serde = { version = "1.0", features = ["derive"] }
+bitvec = "1.0.1"  # 处理比特级操作
+thiserror = "1.0"
+memmap2 = "0.5.10"  # 内存映射文件
