@@ -1,13 +1,32 @@
-use pyo3::prelude::*;
+//! Bioinformatics modules
+//!
+//! This module provides high-level bioinformatics functionality built on top of
+//! the optimized engines.
 
 pub mod seq;
 pub mod io;
 
-/// 生物信息学功能模块
-#[pymodule]
-pub fn module_module(_py: Python, m: &PyModule) -> PyResult<()> {
-    m.add_submodule(seq::seq_module(_py)?)?;
-    m.add_submodule(io::io_module(_py)?)?;
+use crate::engines;
+
+/// Initialize the modules
+pub fn initialize() {
+    // Initialize the underlying engines
+    engines::core::initialize();
     
-    Ok(())
+    // Initialize sequence-specific modules
+    seq::initialize();
+    
+    // Initialize I/O-specific modules
+    io::initialize();
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    
+    #[test]
+    fn test_initialization() {
+        // Simple sanity check
+        initialize();
+    }
 }

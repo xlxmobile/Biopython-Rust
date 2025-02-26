@@ -1,13 +1,27 @@
-use pyo3::prelude::*;
+//! Sequence module
+//!
+//! This module provides sequence types and operations for bioinformatics.
 
 pub mod sequence;
 pub mod alphabet;
 
-/// 序列处理模块
-#[pymodule]
-pub fn seq_module(_py: Python, m: &PyModule) -> PyResult<()> {
-    sequence::register_module(_py, m)?;
-    alphabet::register_module(_py, m)?;
+use crate::engines;
+
+/// Initialize the sequence module
+pub fn initialize() {
+    // Initialize any required state for the sequence module
+}
+
+/// Convenience re-exports
+pub use sequence::{Sequence, SequenceView, SequenceError};
+pub use alphabet::{Alphabet, DNAAlphabet, RNAAlphabet, ProteinAlphabet};
+
+#[cfg(test)]
+mod tests {
+    use super::*;
     
-    Ok(())
+    #[test]
+    fn test_module_initialization() {
+        initialize();
+    }
 }

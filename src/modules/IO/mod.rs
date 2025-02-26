@@ -1,11 +1,26 @@
-use pyo3::prelude::*;
+//! I/O module
+//!
+//! This module provides I/O operations for reading and writing
+//! biological sequence files.
 
 pub mod fasta;
 
-/// 文件I/O模块
-#[pymodule]
-pub fn io_module(_py: Python, m: &PyModule) -> PyResult<()> {
-    // 这将在下一个开发阶段实现
+use crate::engines;
+
+/// Initialize the I/O module
+pub fn initialize() {
+    // Initialize any required state for the I/O module
+}
+
+/// Convenience re-exports
+pub use fasta::{read_fasta, write_fasta, FastaRecord};
+
+#[cfg(test)]
+mod tests {
+    use super::*;
     
-    Ok(())
+    #[test]
+    fn test_module_initialization() {
+        initialize();
+    }
 }
