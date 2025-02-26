@@ -1,0 +1,16 @@
+# Python 相关
+biopython_rust.egg-info/
+build/
+dist/
+__pycache__/
+*.pyc
+
+# Rust 相关
+target/
+
+# macOS 系统文件
+.DS_Store
+
+# 临时文件或编辑器生成文件
+*.swp
+*.swo
