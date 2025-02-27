@@ -970,3 +970,4 @@ mod tests {
         assert_eq!(record.get_metadata("date"), Some(&"2023-01-01".to_string()));
         assert_eq!(record.get_metadata("missing"), None);
     }
+}
